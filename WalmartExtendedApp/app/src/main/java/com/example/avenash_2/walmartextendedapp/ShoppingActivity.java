@@ -17,11 +17,11 @@ public class ShoppingActivity extends AppCompatActivity {
         lblWelcome=findViewById(R.id.lblWelcome);
         Intent intent = getIntent();
         String userEmail = intent.getStringExtra(String.valueOf(R.id.txtEmail));
-        lblWelcome.setText(userEmail);
+        lblWelcome.setText(lblWelcome.getText()+" "+userEmail);
     }
 
     public void OnImageClick(View view) {
-        UtilityClass.hideSoftKeyboard(this);
+        //UtilityClass.hideSoftKeyboard(this);
         final int id=view.getId();
         String message="";
         switch(id){
@@ -30,7 +30,8 @@ public class ShoppingActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.ivClothing:
-                message="You have chosen the Clothing category of shopping";
+                intent = new Intent(getApplicationContext(),ClothActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ivElectronics:
                 message="You have chosen the Electronics category of shopping";
@@ -39,8 +40,5 @@ public class ShoppingActivity extends AppCompatActivity {
                 message="You have chosen the Food category of shopping";
                 break;
         }
-
-        Toast.makeText(getApplicationContext(), message,
-                Toast.LENGTH_LONG).show();
     }
 }

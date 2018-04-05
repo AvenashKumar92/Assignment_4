@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void OnSignIn(View view) {
         UtilityClass.hideSoftKeyboard(this);
-        User loginUser=new User(txtEmail.getText().toString().trim(), txtPass.getText().toString().trim());
+        User loginUser=new User(txtEmail.getText().toString().trim(), txtPass.getText().toString());
         if(!UserDataUtils.getInstance().validateUser(loginUser)) {
             Toast.makeText(getApplicationContext(), "Invalid login email or password!",
                     Toast.LENGTH_LONG).show();
             resetEmailPassword();
             return;
         }
-        Intent intent = new Intent(getApplicationContext(),ShoppingActivity.class);
+        Intent intent = new Intent(this,ShoppingActivity.class);
         intent.putExtra(String.valueOf(R.id.txtEmail), loginUser.getEmail());
         startActivity(intent);
     }
