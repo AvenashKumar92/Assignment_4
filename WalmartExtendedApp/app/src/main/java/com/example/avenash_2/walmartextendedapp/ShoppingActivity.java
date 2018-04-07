@@ -21,24 +21,23 @@ public class ShoppingActivity extends AppCompatActivity {
     }
 
     public void OnImageClick(View view) {
-        //UtilityClass.hideSoftKeyboard(this);
         final int id=view.getId();
-        String message="";
+        Intent intent = null;
         switch(id){
             case R.id.ivBeauty:
-                Intent intent = new Intent(getApplicationContext(),BeautyProductActivity.class);
-                startActivity(intent);
+                intent = new Intent(getApplicationContext(),BeautyProductActivity.class);
                 break;
             case R.id.ivClothing:
                 intent = new Intent(getApplicationContext(),ClothActivity.class);
-                startActivity(intent);
                 break;
             case R.id.ivElectronics:
-                message="You have chosen the Electronics category of shopping";
+                intent =new Intent(getApplicationContext(), ElectronicsActivity.class);
                 break;
             case R.id.ivFood:
-                message="You have chosen the Food category of shopping";
+                intent=new Intent(getApplicationContext(), FoodActivity.class);
                 break;
         }
+        if(intent!=null)
+            startActivity(intent);
     }
 }

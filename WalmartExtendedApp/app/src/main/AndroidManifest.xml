@@ -19,7 +19,10 @@
         <activity android:name=".ShoppingActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".BeautyProductActivity" />
-        <activity android:name=".ClothActivity"></activity>
+        <activity android:name=".ClothActivity" />
+        <activity android:name=".FoodActivity" />
+        <activity android:name=".ElectronicsActivity" />
+        <activity android:name=".ElectronicsProductDVActivity"></activity>
     </application>
 
 </manifest>

@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initList()
     {
-        UserDataUtils.getInstance().addUser(new User("Avenash", "123"));
-        UserDataUtils.getInstance().addUser(new User("Rahul", "321"));
-        UserDataUtils.getInstance().addUser(new User("Rajesh", "123"));
-        UserDataUtils.getInstance().addUser(new User("Malik", "321"));
-        UserDataUtils.getInstance().addUser(new User("Osman", "123"));
+        UserDataUtils.getInstance().addUser(new User("Avenash@yahoo.com", "123"));
+        UserDataUtils.getInstance().addUser(new User("Rahul@yahoo.com", "321"));
+        UserDataUtils.getInstance().addUser(new User("Rajesh@yahoo.com", "123"));
+        UserDataUtils.getInstance().addUser(new User("Malik@yahoo.com", "321"));
+        UserDataUtils.getInstance().addUser(new User("Osman@yahoo.com", "123"));
     }
 
     private void resetEmailPassword(){
