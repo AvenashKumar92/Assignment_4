@@ -17,11 +17,4 @@
         <item>Suits</item>
     </string-array>
 
-    <string-array name="lstFood">
-        <item>@drawable/burger</item>
-        <item>@drawable/chicken</item>
-        <item>@drawable/rice</item>
-        <item>@drawable/samosa</item>
-    </string-array>
-
 </resources>

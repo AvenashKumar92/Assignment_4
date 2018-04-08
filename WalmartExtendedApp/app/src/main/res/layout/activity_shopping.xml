@@ -14,7 +14,7 @@
         android:gravity="right"
         android:text="Welcome" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/lblShop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,5 +102,5 @@
         android:layout_below="@id/lblFood"
         android:layout_alignParentRight="true"
         android:onClick="OnImageClick"
-        app:srcCompat="@drawable/food" />
+        app:srcCompat="@drawable/food" />!-->
 </RelativeLayout>
