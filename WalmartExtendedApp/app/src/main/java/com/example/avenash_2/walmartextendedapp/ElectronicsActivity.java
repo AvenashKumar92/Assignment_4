@@ -33,7 +33,7 @@ public class ElectronicsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent=new Intent(getApplicationContext(), ElectronicsProductDVActivity.class);
-                intent.putExtra(String.valueOf(R.string.productKey), products.get(position));
+                intent.putExtra("Key", products.get(position));
                 startActivity(intent);
             }
         });

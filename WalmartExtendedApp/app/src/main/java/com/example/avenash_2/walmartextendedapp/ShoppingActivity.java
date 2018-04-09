@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -59,6 +60,7 @@ public class ShoppingActivity extends AppCompatActivity {
             }
         };
 
+        actionBar.addTab(actionBar.newTab().setText("Home").setTabListener(listener));
         actionBar.addTab(actionBar.newTab().setText("Beauty").setTabListener(listener));
         actionBar.addTab(actionBar.newTab().setText("Clothing").setTabListener(listener));
         actionBar.addTab(actionBar.newTab().setText("Food").setTabListener(listener));
@@ -77,7 +79,9 @@ public class ShoppingActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 if(which==dialog.BUTTON_POSITIVE) {
-                    finish();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        finish();
+                    }
                 }
             }
         };

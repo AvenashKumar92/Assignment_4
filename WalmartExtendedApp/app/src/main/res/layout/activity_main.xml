@@ -96,7 +96,6 @@
         android:layout_below="@+id/lblEmail"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:text="avenash@yahoo.com"
         android:inputType="textEmailAddress"
        />
 
@@ -107,6 +106,5 @@
         android:layout_below="@+id/lblPassword"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:text="123"
         android:inputType="textPassword" />
 </RelativeLayout>

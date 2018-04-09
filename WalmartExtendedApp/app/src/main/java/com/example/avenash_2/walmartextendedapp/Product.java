@@ -11,6 +11,18 @@ class Product implements Parcelable {
     private int itemId;
     private String description;
 
+    public static final Creator<Product> CREATOR = new Creator<Product>() {
+        @Override
+        public Product createFromParcel(Parcel in) {
+            return new Product(in);
+        }
+
+        @Override
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
+
     public String getTitle() {
         return title;
     }
@@ -64,6 +76,21 @@ class Product implements Parcelable {
         return 0;
     }
 
+    public Product(){
+
+    }
+
+    // Parcelling part
+    public Product(Parcel in){
+        this.title = in.readString();
+        this.color = in.readString();
+        this.image = in.readString();
+        this.description = in.readString();
+
+        this.itemId=in.readInt();
+
+        this.price= in.readDouble();
+    }
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);

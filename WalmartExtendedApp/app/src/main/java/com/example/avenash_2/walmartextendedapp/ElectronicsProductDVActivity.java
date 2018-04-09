@@ -18,7 +18,7 @@ public class ElectronicsProductDVActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_electronics_product_dv);
         Intent intent = getIntent();
-        Product product=intent.getParcelableExtra(String.valueOf(R.string.productKey));
+        Product product=intent.getParcelableExtra("Key");
 
         ivProductImg=findViewById(R.id.ivElecDtlImage);
         lblColor=findViewById(R.id.lblElecDtlColor);
